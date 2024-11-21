@@ -55,7 +55,7 @@ if (isset($_POST['submit'])) {
 }
 
 function validLastPart($domain) {
-    $validWords = array("com", "in", "edu");
+    $validWords = array("com", "in", "edu", "org");
     $flag = false;
 
     for ($i = 0; $i < count($validWords); $i++) {
