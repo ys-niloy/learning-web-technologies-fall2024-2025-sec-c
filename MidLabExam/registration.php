@@ -9,15 +9,14 @@ if (isset($_POST["submit"])) {
     } else {
         $name = $_POST["name"];
         $email = $_POST["email"];
+        $password = $_POST["password"];
         $gender = $_POST["gender"];
         $bloodGroup = $_POST["bloodGroup"];
         $degree = $_POST["degree"];
 
-        global $std;
-        $std = [$name, $email, $gender, $bloodGroup, $degree];
+        $_SESSION['std'] = array($name, $email, $gender, $bloodGroup, $degree, $password); 
 
-
-        header("Location: test.php");
+        header("Location: loginCheck.php");
         
 
 
